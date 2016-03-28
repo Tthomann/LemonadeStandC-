@@ -11,9 +11,11 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             OptionText Text = new OptionText();
+            PlayerBuySupplies BuyingSupplies = new PlayerBuySupplies();
+            //below this
             Text.TitleMenu();
-           
-            Console.ReadLine();
+            Text.BuyTypeOfSupply();
+            
         }
     }
 }
