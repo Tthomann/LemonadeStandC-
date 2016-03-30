@@ -10,12 +10,35 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            OptionText Text = new OptionText();
-            PlayerBuySupplies BuyingSupplies = new PlayerBuySupplies();
-            //below this
-            Text.TitleMenu();
-            Text.BuyTypeOfSupply();
             
+            StoreSupplies SuppliesPlayerOwns = new StoreSupplies();
+            StoreSupplies Money = new StoreSupplies();
+            CurrentWeatherStatus WeatherStatus = new CurrentWeatherStatus();
+          
+            StoreSupplies playerSupplies = new StoreSupplies();
+            PlayerSupplyContainer playerSupplyContainer = new PlayerSupplyContainer();
+            Customer customer = new Customer(SuppliesPlayerOwns,playerSupplyContainer, WeatherStatus);
+            BasePriceOfSupplies supplyPrice = new BasePriceOfSupplies();
+            OptionText optionText = new OptionText(supplyPrice, playerSupplyContainer);
+          
+
+            optionText.TitleMenu();
+            playerSupplies.RunSupplyBuyer();
+           
+            customer.playersLemonadeStand.SpawnCustomer();
+            Console.ReadLine();
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

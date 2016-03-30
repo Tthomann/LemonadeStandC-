@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     public class BasePriceOfSupplies
     {
-        public double Money = 50.00;
+       
         public double LemonPrice = 2.50;
         public double SugarPrice = 2.00;
         public double IcePrice = 1.00;

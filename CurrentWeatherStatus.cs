@@ -8,8 +8,8 @@ namespace LemonadeStand
 {
     public class CurrentWeatherStatus
     {
-        Random randomWeather = new Random();
-        Random randomTemprature = new Random();
+        Random random = new Random();
+        
         int num;
         public string weather;
         public int temperature;
@@ -19,8 +19,8 @@ namespace LemonadeStand
         }
         public string RandomWeather()
         {
-            num = randomWeather.Next(1, 5);
-            Console.WriteLine("The weather today is : ");
+            num = random.Next(1, 5);
+           
             if (num == 1)
             {
                  weather = "sunny";
@@ -34,11 +34,12 @@ namespace LemonadeStand
             {
                  weather = "blazing hot";
             }
+            Console.WriteLine("The weather today is : " + weather);
             return weather;
         }
         public int RandomTemperature()
         {
-            temperature = randomTemprature.Next(1, 100);
+            temperature = random.Next(1, 100);
             Console.WriteLine("The temperature today is : " + temperature);
             return temperature;
         }

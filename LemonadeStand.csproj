@@ -44,16 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasePriceOfSupplies.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="DaysOfTheWeek.cs" />
-    <Compile Include="LemonadePrice.cs" />
-    <Compile Include="MakeLemonade.cs" />
     <Compile Include="OptionText.cs" />
-    <Compile Include="PlayerBuySupplies.cs" />
+    <Compile Include="PlayersLemonadeStand.cs" />
+    <Compile Include="StoreSupplies.cs" />
     <Compile Include="PlayerSupplyContainer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerBuyingModifiers.cs" />
-    <Compile Include="CustomerCondition.cs" />
     <Compile Include="CurrentWeatherStatus.cs" />
   </ItemGroup>
   <ItemGroup>
