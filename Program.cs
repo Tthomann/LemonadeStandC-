@@ -6,26 +6,23 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            
-            StoreSupplies SuppliesPlayerOwns = new StoreSupplies();
-            StoreSupplies Money = new StoreSupplies();
-            CurrentWeatherStatus WeatherStatus = new CurrentWeatherStatus();
-          
-            StoreSupplies playerSupplies = new StoreSupplies();
-            PlayerSupplyContainer playerSupplyContainer = new PlayerSupplyContainer();
-            Customer customer = new Customer(SuppliesPlayerOwns,playerSupplyContainer, WeatherStatus);
-            BasePriceOfSupplies supplyPrice = new BasePriceOfSupplies();
-            OptionText optionText = new OptionText(supplyPrice, playerSupplyContainer);
-          
 
-            optionText.TitleMenu();
-            playerSupplies.RunSupplyBuyer();
-           
-            customer.playersLemonadeStand.SpawnCustomer();
+    
+            DayProcess dayProcess = new DayProcess();
+            Weather weather = new Weather();
+        
+            dayProcess.TitleMenu();
+            weather.RandomWeather();
+            weather.RandomTemperature();
+            weather.WeatherPrediction();
+            dayProcess.RunSupplyBuyer();
+            
+
+
             Console.ReadLine();
         }
     }
